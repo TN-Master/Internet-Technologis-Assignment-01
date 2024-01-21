@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information webpage | Theekshana Nuwan </title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="header" id="home">
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#mainContent">Main Content</a>
+            <a href="#aboutMe">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#contactInfo">Contact</a>
+        </nav>
+
+        <div class="welcome">
+            <img class="welcomeimg" src="img/welcomeImg.png" alt="">
+        </div>
+    </div>
+
+    <div class="mainContent" id="mainContent">
+        <div class="profilePicture">
+            <img src="img/profile.jpg" alt="profile image">
+        </div>
+        <div class="studentDetails">
+            <h3><span>Name &nbsp;&nbsp;&nbsp;&nbsp;:</span> Theekshana Nuwan</h3>
+            <h3><span>iCET UID &nbsp;:</span> OR23106047</h3>
+            <h3><span>Course &nbsp;&nbsp;:</span> ICM</h3>
+        </div>
+    </div>
+
+    <div class="aboutMe" id="aboutMe">
+        <h1>About <span>Me</span></h1>
+        <div class="content">
+            <div class="box">
+                <div class="paragraph">
+                    <p>Hello, I'm Theekshana Nuwan. I was born in 2009. My dream is to become a software engineer.</p>
+                </div>
+                <div class="skills">
+                    <h3>List of i knowed programming <br> languages</h3>
+                    <ul>
+                        <li>>:'( HTML</li>
+                        <li>>:'( CSS</li>
+                        <li>>:'( JavaScript</li>
+                        <li>>:'( Java</li>
+                        <li>>:'( Python</li>
+                        <li>>:'( SQL</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="projects" class="projects">
+        <h1><span>My</span> Projects</h1>
+        <h2>You can use you mouse scroll wheel to scroll this</h2>
+        <div class="content-wrap">
+            <img src="img/back.png" id="backBtn" alt="back btn">
+            <div class="allCard">
+                <div class="projectCard">
+                    <img src="img/project01.png" alt="project image 01">
+                    <a target=”_blank” class="btn" href="http://nuwantech.rf.gd/">Show project</a>
+                </div>
+                <div class="projectCard">
+                    <img src="img/project02.png" alt="project image 02">
+                    <a target=”_blank” class="btn" href="http://pramithperera.rf.gd/">Show project</a>
+                </div>
+                <div class="projectCard">
+                    <img src="img/project03.png" alt="project image 03">
+                    <a target=”_blank” class="btn" href="https://www.youtube.com/@nuwantech">Show project</a>
+                </div>
+            </div>
+            <img src="img/next.png" id="nextBtn" alt="next btn">
+        </div>
+    </div>
+
+    <div class="contactInfo" id="contactInfo">
+        <h1>Contact <span>Information</span></h1>
+        <div class="content">
+            <div class="basicInfo">
+                <div class="card">
+                    <h2><i class="fa-solid fa-phone"></i> Phone (only Whatsapp) </h2>
+                    <h3>+94 70 5028 061</h3>
+                </div>
+                <div class="card">
+                    <h2><i class="fa-solid fa-envelope"></i> Email </h2>
+                    <h3>theekshanabro40@gmail.com</h3>
+                </div>
+                <div class="card">
+                    <h2><i class="fa-brands fa-facebook"></i> Facebook </h2>
+                    <h3><a target="_blank" href="https://www.facebook.com/profile.php?id=100073512102369">click here</a>
+                    </h3>
+                </div>
+                <div class="card">
+                    <h2><i class="fa-brands fa-whatsapp"></i> WhatsApp </h2>
+                    <h3><a target="_blank" href="wa.me/+94705028061">click here</a></h3>
+                </div>
+                <div class="card">
+                    <h2><i class="fa-brands fa-youtube"></i> youtube </h2>
+                    <h3><a target="_blank" href="https://www.youtube.com/@nuwantech">click here</a></h3>
+                </div>
+            </div>
+            <div class="emailSender">
+                <form action="https://api.web3forms.com/submit" method="POST">
+
+                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    <label for="name">Name</label>
+                    <input type="text" placeholder="Enter Your Name" name="name" required>
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="Enter Your Email name" name="email" required>
+                    <label for="message">Message</label>
+                    <textarea name="message" placeholder="Enter Mesage" required></textarea>
+                    <!-- <div class="h-captcha" data-captcha="true"></div> -->
+                    <button type="submit">Submit Form</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h3><br><br><br>Copyright &copy; This website is designed by Teekshana Nuwan. All codes are owned by Theekshana
+            Nuwan</h3>
+    </div>
+
+    <!-- js  -->
+
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <script src="https://kit.fontawesome.com/017f81d7ab.js" crossorigin="anonymous"></script>
+    <script>
+
+        let scrollContainer = document.querySelector(".allCard");
+        let backBtn = document.getElementById("backBtn");
+        let nextBtn = document.getElementById("nextBtn");
+
+        scrollContainer.addEventListener("wheel", (evt) => {
+            evt.preventDefault();
+            scrollContainer.scrollLeft += evt.deltaY;
+            scrollContainer.style.scrollBehavior = "auto";
+        });
+
+        nextBtn.addEventListener("click", () => {
+            scrollContainer.style.scrollBehavior = "smooth";
+            scrollContainer.scrollLeft += 900;
+        });
+
+        backBtn.addEventListener("click", () => {
+            scrollContainer.style.scrollBehavior = "smooth";
+            scrollContainer.scrollLeft -= 900;
+        });
+
+    </script>
+
+</body>
+
+</html>

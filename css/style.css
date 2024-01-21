@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #2b313e;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+span {
+    color: #b8d3ff;
+}
+
+.navbar {
+    background-color: rgba(167, 208, 255, 0.1);
+    backdrop-filter: blur(50px);
+    width: 95%;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 15px;
+    position: fixed;
+    border-radius: 100px;
+    z-index: 1;
+    box-shadow: 0 0px 40px #212121;
+}
+
+.navbar a {
+    color: #fff;
+    padding: 3px 20px;
+    margin: 14px;
+    font-size: 18px;
+    border-radius: 20px;
+    background-color: #688fcd;
+    border: 4px solid #688fcd;
+    transition: all 0.5s;
+}
+
+.navbar a:hover {
+    border: 4px solid #688fcd;
+    background-color: transparent;
+    box-shadow: 0 0px 15px #688fcd;
+    transition: all 0.5s;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+}
+
+.welcomeimg {
+    background-color: rgba(167, 208, 255, 0.1);
+    backdrop-filter: blur(50px);
+    border: 5px solid #688fcd;
+    width: 700px;
+    border-radius: 40px;
+    padding: 15px;
+    box-shadow: 0 0px 60px #212121;
+}
+
+.mainContent {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.studentDetails,
+.profilePicture {
+    padding: 40px;
+    margin: 40px;
+    background-color: rgba(167, 208, 255, 0.1);
+    backdrop-filter: blur(50px);
+    box-shadow: 0 0px 40px #212121;
+}
+
+.profilePicture {
+    border-radius: 30px;
+}
+
+.mainContent .profilePicture img {
+    width: 300px;
+    border-radius: 30px;
+
+}
+
+.studentDetails {
+    border-radius: 30px;
+    width: 450px;
+}
+
+.studentDetails h3 {
+    font-size: 22px;
+}
+
+.studentDetails span {
+    color: #b8d3ff;
+}
+
+.aboutMe {
+    width: 100%;
+    height: 100vh;
+}
+
+.aboutMe h1 {
+    text-align: center;
+    font-size: 50px;
+    padding-top: 100px;
+}
+
+.aboutMe .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutMe .content .box {
+    background-color: rgba(167, 208, 255, 0.1);
+    backdrop-filter: blur(50px);
+    border-radius: 10px;
+    width: 1100px;
+    height: 400px;
+    margin: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0px 40px #212121;
+}
+
+.aboutMe .content .box .paragraph {
+    text-align: justify;
+    font-size: 19px;
+    width: 420px;
+    padding: 30px;
+    background-color: rgba(167, 208, 255, 0.1);
+    backdrop-filter: blur(50px);
+    margin-right: 60px;
+    margin-left: -30px;
+    box-shadow: 0 0px 15px #688fcd;
+}
+
+.aboutMe .content .box .skills h3 {
+    font-size: 24px;
+    text-align: center;
+    /* margin-top: -70px; */
+    color: #b8d3ff;
+}
+
+.aboutMe .content .box .skills ul {
+    list-style: none;
+    margin-left: 100px;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.projects {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.projects h1 {
+    text-align: center;
+    font-size: 50px;
+    padding-top: 100px;
+}
+
+.projects h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.2;
+    color: #649fff;
+}
+
+.projects .allCard {
+    display: flex;
+
+    /* justify-content: center; */
+    width: 1200px;
+    overflow-x: scroll;
+    margin: auto;
+    margin-top: 40px;
+    box-shadow: 0 0px 40px #212121;
+}
+
+.projects .allCard::-webkit-scrollbar {
+    display: none;
+}
+
+.content-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nextBtn,
+#backBtn {
+    cursor: pointer;
+    color: white;
+    margin: 30px;
+}
+
+.projects .allCard .projectCard {
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    background-color: rgba(167, 208, 255, 0.1);
+    backdrop-filter: blur(50px);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.projects .allCard .projectCard img {
+    width: 560px;
+    padding: 20px;
+}
+
+.projects .btn {
+    color: white;
+    font-size: 19px;
+    background-color: #688fcd;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    border: 4px solid #688fcd;
+    transition: all 0.5s;
+}
+
+.projects .btn:hover {
+    border: 4px solid #688fcd;
+    background-color: transparent;
+    box-shadow: 0 0px 15px #688fcd;
+    transition: all 0.5s;
+}
+
+.contactInfo {
+    width: 100%;
+    height: 100vh;
+}
+
+.contactInfo h1 {
+    text-align: center;
+    font-size: 50px;
+    padding-top: 100px;
+}
+
+.contactInfo .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.basicInfo h2 i {
+    color: #688fcd;
+    padding: 5px;
+}
+
+.basicInfo h2 {
+    font-size: 21px;
+    color: #ffffffb3;
+}
+
+.basicInfo h3,
+.basicInfo a {
+    font-size: 17px;
+    margin-left: 70px;
+    color: #b8d3ff;
+}
+
+.basicInfo a {
+    margin-left: 0px;
+
+    transition: all 0.5s;
+}
+
+.basicInfo a:hover {
+    color: #649fff;
+}
+
+.basicInfo .card {
+    background-color: rgba(167, 208, 255, 0.1);
+    backdrop-filter: blur(50px);
+    margin: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.emailSender {
+    background-color: rgba(167, 208, 255, 0.1);
+    backdrop-filter: blur(50px);
+    padding: 20px;
+    margin: 0px 60px;
+    border-radius: 20px;
+}
+
+.emailSender form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.emailSender form input,
+textarea {
+    width: 350px;
+    padding: 10px 12px;
+    background-color: transparent;
+    border: none;
+    margin: 10px;
+    color: white;
+    font-size: 18px;
+    outline: none;
+    border: 3px solid #649fff;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.emailSender form textarea {
+    height: 130px;
+    resize: none;
+}
+
+.emailSender form input:focus,
+textarea:focus,
+input:hover,
+textarea:hover {
+    box-shadow: 0 0px 15px #688fcd;
+    color: white;
+    transition: all 0.5s;
+}
+
+.emailSender form label {
+    letter-spacing: 3px;
+}
+
+.emailSender form button {
+    width: 200px;
+    padding: 8px 10px;
+    font-size: 16px;
+    background-color: #688fcd;
+    color: white;
+    border-radius: 20px;
+    outline: none;
+    border: 3px solid #688fcd;
+    cursor: pointer;
+    margin: 5px;
+    transition: all 0.5s;
+}
+
+.emailSender form button:hover {
+    background: transparent;
+    box-shadow: 0 0px 15px #688fcd;
+}
+
+.footer {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    background-color: #2d4770;
+    border-radius: 40px 40px 0px 0px;
+}
+
+.footer h3 {
+    font-size: 18px;
+}
