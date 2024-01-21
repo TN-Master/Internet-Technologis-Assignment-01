@@ -6,27 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Information webpage | Theekshana Nuwan </title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
-    <div class="header" id="home">
-        <nav class="navbar">
+    <div class="header" id="home" >
+        <nav class="navbar" data-aos="zoom-in-up">
             <a href="#home">Home</a>
             <a href="#mainContent">Main Content</a>
             <a href="#aboutMe">About Me</a>
             <a href="#projects">Projects</a>
             <a href="#contactInfo">Contact</a>
         </nav>
-        
+
         <div class="welcome">
-            <img class="welcomeimg" src="img/welcomeImg.png" alt="">
+            <img class="welcomeimg" src="img/welcomeImg.png" alt="" data-aos="zoom-in-up">
         </div>
     </div>
     <div class="mainContent" id="mainContent">
-        <div class="profilePicture">
+        <div class="profilePicture"  data-aos="fade-up-right">
             <img src="img/profile.jpg" alt="profile image">
         </div>
-        <div class="studentDetails">
+        <div class="studentDetails" data-aos="fade-up-left">
             <h3><span>Name &nbsp;&nbsp;&nbsp;&nbsp;:</span> Theekshana Nuwan</h3>
             <h3><span>iCET UID &nbsp;:</span> OR23106047</h3>
             <h3><span>Course &nbsp;&nbsp;:</span> ICM</h3>
@@ -34,21 +35,21 @@
     </div>
 
     <div class="aboutMe" id="aboutMe">
-        <h1>About <span>Me</span></h1>
+        <h1 data-aos="fade-up">About <span>Me</span></h1>
         <div class="content">
             <div class="box">
-                <div class="paragraph">
+                <div class="paragraph"  data-aos="zoom-in">
                     <p>Hello, I'm Theekshana Nuwan. I was born in 2009. My dream is to become a software engineer.</p>
                 </div>
                 <div class="skills">
-                    <h3>List of i knowed programming <br> languages</h3>
+                    <h3 data-aos="zoom-in-down">List of i knowed programming <br> languages</h3>
                     <ul>
-                        <li> >:'( HTML</li>
-                        <li> >:'( CSS</li>
-                        <li> >:'( JavaScript</li>
-                        <li> >:'( Java</li>
-                        <li> >:'( Python</li>
-                        <li> >:'( SQL</li>
+                        <li data-aos="fade-left"data-aos-duration="800"> >:'( HTML</li>
+                        <li data-aos="fade-left"data-aos-duration="900"> >:'( CSS</li>
+                        <li data-aos="fade-left"data-aos-duration="1000"> >:'( JavaScript</li>
+                        <li data-aos="fade-left"data-aos-duration="1100"> >:'( Java</li>
+                        <li data-aos="fade-left"data-aos-duration="1200"> >:'( Python</li>
+                        <li data-aos="fade-left"data-aos-duration="1300"> >:'( SQL</li>
                     </ul>
                 </div>
             </div>
@@ -56,11 +57,11 @@
     </div>
 
     <div id="projects" class="projects">
-        <h1><span>My</span> Projects</h1>
-        <h2>You can use you mouse scroll wheel to scroll this</h2>
+        <h1 data-aos="fade-up"><span>My</span> Projects</h1>
+        <h2 >You can use you mouse scroll wheel to scroll this</h2>
         <div class="content-wrap">
-            <img src="img/back.png" id="backBtn" alt="back btn">
-            <div class="allCard">
+            <img src="img/back.png" id="backBtn" alt="back btn" data-aos="fade-right">
+            <div class="allCard" data-aos="zoom-in">
                 <div class="projectCard">
                     <img src="img/project01.png" alt="project image 01">
                     <a target=”_blank” class="btn" href="http://nuwantech.rf.gd/">Show project</a>
@@ -74,14 +75,14 @@
                     <a target=”_blank” class="btn" href="https://www.youtube.com/@nuwantech">Show project</a>
                 </div>
             </div>
-            <img src="img/next.png" id="nextBtn" alt="next btn">
+            <img src="img/next.png" id="nextBtn" alt="next btn" data-aos="fade-left">
         </div>
     </div>
 
     <div class="contactInfo" id="contactInfo">
-        <h1>Contact <span>Information</span></h1>
+        <h1 data-aos="fade-up">Contact <span>Information</span></h1>
         <div class="content">
-            <div class="basicInfo">
+            <div class="basicInfo" data-aos="fade-up-right">
                 <div class="card">
                     <h2><i class="fa-solid fa-phone"></i> Phone (only Whatsapp) </h2>
                     <h3>+94 70 5028 061</h3>
@@ -104,7 +105,7 @@
                     <h3><a target="_blank" href="https://www.youtube.com/@nuwantech">click here</a></h3>
                 </div>
             </div>
-            <div class="emailSender">
+            <div class="emailSender" data-aos="fade-up-left">
                 <form action="https://api.web3forms.com/submit" method="POST">
 
                     <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
@@ -126,6 +127,9 @@
         <h3><br><br><br>Copyright &copy; This website is designed by Teekshana Nuwan. All codes are owned by Theekshana
             Nuwan</h3>
     </div>
+
+    <!-- aos  -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
     <!-- js  -->
 
@@ -151,6 +155,10 @@
         backBtn.addEventListener("click", () => {
             scrollContainer.style.scrollBehavior = "smooth";
             scrollContainer.scrollLeft -= 900;
+        });
+
+        AOS.init({
+            duration: 1000
         });
 
     </script>
